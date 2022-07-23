@@ -1,0 +1,8 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <h1 class="title">Starwar Films</h1>
+    <app-main-content class="menu-element" [page]="(page$ | async)!" (onSelectedPersonChanged)="selectedPersonChanged($event)">
+  </app-main-content>
+</mat-drawer>
+  <app-profile-view *ngIf="selectedPerson" [flims]="selectedPerson"></app-profile-view>  
+</mat-drawer-container>

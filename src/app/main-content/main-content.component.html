@@ -1,0 +1,7 @@
+<div class="list-group">
+  <app-side-data
+    *ngFor="let flims of page?.results"
+    [flims]="flims"
+    (click)="onMenuElementClick(flims)"
+  ></app-side-data>
+</div>
